@@ -100,6 +100,7 @@ impl Board {
         (file + rank*8 - 9) as usize
     }
     
+    
     fn to_string(self: &Board) -> String {
         let mut s = "*** the board ***\n".to_string();
         for file in 1..8 {
@@ -113,13 +114,16 @@ impl Board {
         }//for file
         s
     }
+    
 }
 
 fn main() {
     println!("Hello, world!");
     
-    let b = Board::empty();
+    let sv = SqValue::WK;
+    println!("sv is {}\n", sv.to_string());
     
+    let b = Board::empty();
     println!("board b:\n{}", b.to_string());
 }
 
